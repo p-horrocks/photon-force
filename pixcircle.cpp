@@ -1,12 +1,12 @@
 #include "pixcircle.h"
 
-#define PIXEL_COUNT 24
+#define PIXEL_COUNT 6
 #define PIXEL_TYPE  WS2812B
 
 namespace
 {
 
-uint32_t _fadeFactors[PIXEL_COUNT] = { 100, 50, 25, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+uint32_t _fadeFactors[PIXEL_COUNT] = { 100, 50, 25, 12, 0, 0};//, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 uint32_t componentValue(uint32_t base, int stage)
 {
@@ -48,7 +48,11 @@ void PixCircle::step()
 
         strip_.setPixelColor(pix, strip_.Color(r, g, b));
     }
-    strip_.show();
 
     currentPix_ = (currentPix_ == 0) ? (PIXEL_COUNT - 1) : (currentPix_ - 1);
+}
+
+void PixCircle::show()
+{
+    strip_.show();
 }

@@ -11,6 +11,7 @@ public:
 
     void init();
     void step();
+    void show();
 
 private:
     const uint32_t red_;
