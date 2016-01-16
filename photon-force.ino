@@ -1,5 +1,6 @@
 #include "irreader.h"
 #include "pixcircle.h"
+#include "serialstream.h"
 
 SYSTEM_MODE(MANUAL);
 
@@ -19,6 +20,7 @@ uint32_t _lastLoopTime = 0;
 // LOOP_ITERATIONS)
 uint8_t _loopCount = LOOP_ITERATIONS;
 
+SerialStream _serial;
 PixCircle _pixCircle(PIXEL_PIN, 128, 128, 128);
 //IrReader _irReader(IR_PIN);
 
@@ -94,9 +96,7 @@ void doLoopDelay()
 
 void setup()
 {
-    // For debugging output
-    Serial.begin(115200);
-
+    _serial.init();
     _pixCircle.init();
 //    _irReader.init();
 }
@@ -141,5 +141,6 @@ void loop()
     }
     else
     {
+        _serial.stream();
     }
 }
