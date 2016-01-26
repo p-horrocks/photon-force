@@ -4,25 +4,14 @@
 // The main loop is so fast that printing out debugging data to the serial port
 // takes too long. This class spaces out the transmission so it doesn't
 // interfere with the main loop.
-#define BUFFER_LEN 256
-
-class SerialStream
+namespace serialstream
 {
-public:
-    SerialStream();
 
-    void init();
-    void print(const char* str);
-    void stream();
+void init();
+void update();
 
-private:
-    // Position where new characters are appended.
-    uint8_t head_;
+void print(const char* str);
 
-    // Position where the next character will be streamed from.
-    uint8_t tail_;
-
-    char buffer_[BUFFER_LEN];
-};
+} // namespace serialstream
 
 #endif // SERIALSTREAM_H

@@ -1,42 +1,57 @@
 #include "application.h"
+
 #include "serialstream.h"
 
-SerialStream::SerialStream() :
-    head_(0),
-    tail_(0)
-{
-}
+#define BUFFER_LEN 256
 
-void SerialStream::init()
+namespace serialstream
+{
+
+namespace
+{
+
+char _buffer[BUFFER_LEN] = { 0 };
+
+// Position in the buffer for the next append.
+uint8_t _head = 0;
+
+// Position where the next character will be streamed from.
+uint8_t _tail = 0;
+
+} // namespace
+
+void init()
 {
     Serial.begin(115200);
 }
 
-void SerialStream::print(const char* str)
+void update()
+{
+    // Stream out just the next character. At 115200 a byte takes around
+    // 67us to transmit. Since we want the main loop to run as fast as possible
+    // only one character is transmitted each iteration.
+    if(tail_ != head_)
+    {
+        char next[2] = " ";
+        next[0] = _buffer[_tail];
+        Serial.print(next);
+        ++_tail;
+    }
+}
+
+void print(const char* str)
 {
     // Append the characters until the head hits the tail. Silently drop the
     // rest.
     while(*str)
     {
-        if(head_ + 1 == tail_)
+        if(_head + 1 == _tail)
             break;
 
-        buffer_[head_] = *str;
-        ++head_;
+        _buffer[_head] = *str;
+        ++_head;
         ++str;
     }
 }
 
-void SerialStream::stream()
-{
-    // Stream out just the next character. At 115200 a byte takes around
-    // 67us to transmit. With a loop period of 200us that doesn't let us stream
-    // much each iteration.
-    if(tail_ != head_)
-    {
-        char next[2] = " ";
-        next[0] = buffer_[tail_];
-        Serial.print(next);
-        ++tail_;
-    }
-}
+} // namespace serialstream
