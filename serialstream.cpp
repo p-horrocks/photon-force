@@ -30,7 +30,7 @@ void update()
     // Stream out just the next character. At 115200 a byte takes around
     // 67us to transmit. Since we want the main loop to run as fast as possible
     // only one character is transmitted each iteration.
-    if(tail_ != head_)
+    if(_tail != _head)
     {
         char next[2] = " ";
         next[0] = _buffer[_tail];
