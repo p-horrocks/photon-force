@@ -4,6 +4,7 @@
 #include "irreader.h"
 #include "neopix.h"
 #include "serialstream.h"
+#include "settings.h"
 
 #define VERSION "0.1"
 
