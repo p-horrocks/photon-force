@@ -5,6 +5,7 @@
 #include "neopix.h"
 #include "serialstream.h"
 #include "settings.h"
+#include "trigger.h"
 
 #define VERSION "0.1"
 
@@ -45,6 +46,7 @@ void setup()
     serialstream::init();
     neopix::init();
     irreader::init();
+    trigger::init();
 
     serialstream::print("*** PhotonForce " VERSION " ***\r\n");
 }
@@ -56,4 +58,9 @@ void loop()
     serialstream::update();
     neopix::update(now);
     irreader::update(now);
+
+    if(trigger::shouldFire(now))
+    {
+        serialstream::print("Firing\r\n");
+    }
 }
