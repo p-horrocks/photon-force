@@ -1,19 +1,12 @@
 #ifndef IRREADER_H
 #define IRREADER_H
 
-#include "application.h"
-
-class IrReader
+namespace irreader
 {
-public:
-    IrReader(uint8_t pin);
 
-    void init();
-    void poll();
+void init();
+void update(uint32_t now);
 
-private:
-    const uint8_t pin_;
-    uint8_t state_;
-};
+} // namespace irreader
 
 #endif // IRREADER_H

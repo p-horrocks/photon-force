@@ -1,22 +1,16 @@
+#include "application.h"
+
 #include "irreader.h"
 
-IrReader::IrReader(uint8_t pin) :
-    pin_(pin),
-    state_(LOW)
+namespace irreader
+{
+
+void init()
 {
 }
 
-void IrReader::init()
+void update(uint32_t now)
 {
-    pinMode(pin_, INPUT);
 }
 
-void IrReader::poll()
-{
-    uint8_t newState = digitalRead(pin_);
-    if(newState != state_)
-    {
-        Serial.println(newState);
-        state_ = newState;
-    }
-}
+} // namespace irreader
