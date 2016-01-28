@@ -11,6 +11,11 @@ void init();
 void update();
 
 void print(const char* str);
+void printCh(char ch);
+void printNum(int n);
+void printNum(uint32_t n);
+void printNum(uint16_t n);
+void printNum(uint8_t n);
 
 } // namespace serialstream
 

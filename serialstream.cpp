@@ -18,6 +18,31 @@ uint8_t _head = 0;
 // Position where the next character will be streamed from.
 uint8_t _tail = 0;
 
+ void iPrintNum(uint32_t n)
+{
+    int pos = 0;
+    char buf[32];
+
+    while(n != 0)
+    {
+        buf[pos++] = (n % 10) + '0';
+        n /= 10;
+    }
+
+    if(pos == 0)
+    {
+        printCh('0');
+    }
+    else
+    {
+        do
+        {
+            printCh(buf[--pos]);
+        }
+        while(pos > 0);
+    }
+}
+
 } // namespace
 
 void init()
@@ -45,13 +70,69 @@ void print(const char* str)
     // rest.
     while(*str)
     {
-        if(_head + 1 == _tail)
-            break;
-
-        _buffer[_head] = *str;
-        ++_head;
+        printCh(*str);
         ++str;
     }
+}
+
+void printCh(char ch)
+{
+    if(_head + 1 != _tail)
+    {
+        _buffer[_head++] = ch;
+    }
+}
+
+void printNum(int n)
+{
+    int neg = 0;
+    int pos = 0;
+    char buf[32];
+
+    if(n < 0)
+    {
+        neg = 1;
+        n = -1;
+    }
+
+    while(n != 0)
+    {
+        buf[pos++] = (n % 10) + '0';
+        n /= 10;
+    }
+
+    if(pos == 0)
+    {
+        printCh('0');
+    }
+    else
+    {
+        do
+        {
+            printCh(buf[--pos]);
+        }
+        while(pos > 0);
+
+        if(neg)
+        {
+            printCh('-');
+        }
+    }
+}
+
+void printNum(uint32_t n)
+{
+    iPrintNum(n);
+}
+
+void printNum(uint16_t n)
+{
+    iPrintNum(n);
+}
+
+void printNum(uint8_t n)
+{
+    iPrintNum(n);
 }
 
 } // namespace serialstream
