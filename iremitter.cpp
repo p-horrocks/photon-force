@@ -33,6 +33,8 @@ uint16_t _pwmBuffer[BUF_ELEMENTS] = { 0 };
 
 void init()
 {
+    return;
+
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA1, ENABLE);
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
@@ -128,13 +130,13 @@ void sendCode(uint32_t code)
     _tickCounts[n++] = END_GAP;
 
     // remove-me
-//    serialstream::print("Tick counts:\r\n");
-//    for(int i = 0; i < IR_CHUNKS; ++i)
-//    {
-//        serialstream::print(_tickCounts[i]);
-//        serialstream::print(' ');
-//    }
-//    serialstream::print("\r\n");
+    serialstream::print("Tick counts:\r\n");
+    for(int i = 0; i < IR_CHUNKS; ++i)
+    {
+        serialstream::printNum(_tickCounts[i]);
+        serialstream::printCh(' ');
+    }
+    serialstream::print("\r\n");
 
 //    DMA_SetCurrDataCounter(DMA1_Stream0, BUF_ELEMENTS);
 //    DMA_Cmd(DMA1_Stream0, ENABLE);

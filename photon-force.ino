@@ -47,6 +47,7 @@ void setup()
     serialstream::init();
     neopix::init();
     irreader::init();
+    iremitter::init();
     trigger::init();
 
     serialstream::print("*** PhotonForce " VERSION " ***\r\n");
@@ -63,5 +64,7 @@ void loop()
     if(trigger::shouldFire(now))
     {
         serialstream::print("Firing\r\n");
+
+        iremitter::sendCode(settings::ourIrCode());
     }
 }
