@@ -1,6 +1,7 @@
 #include "application.h"
 
 #include "dma.h"
+#include "iremitter.h"
 #include "irreader.h"
 #include "neopix.h"
 #include "serialstream.h"
@@ -18,7 +19,7 @@ SYSTEM_MODE(MANUAL);
 // easily. This table shows the assignments, however, and hopefully they stay
 // relatively in-sync with reality.
 //
-// Function         Requires  Pin     TIM DMA
+// Function         Requires  Pin     TIM DMA1
 // ------------------------------------------
 //                            D0/PB7
 // IR send          timer/DMA D1/PB6  4.1 0.2
