@@ -2,6 +2,7 @@
 
 #include "dma.h"
 #include "neopix.h"
+#include "settings.h"
 
 // Each pixel requires a value per bit per colour component. One extra
 // to reset the output value when finished.
@@ -23,10 +24,6 @@ namespace neopix
 
 namespace
 {
-
-uint8_t _red   = 0;
-uint8_t _green = 0;
-uint8_t _blue  = 128;
 
 uint32_t _lastUpdate               = 0;
 uint16_t _pwmBuffer[BUF_ELEMENTS]  = { 0 };
@@ -157,6 +154,9 @@ void update(uint32_t now)
     }
     else
     {
+        uint8_t r, g, b;
+        settings::ourColour(r, g, b);
+
         int pos = 0;
         for(int i = 0; i < NEOPIX_COUNT; ++i)
         {
@@ -166,9 +166,9 @@ void update(uint32_t now)
                 pix -= NEOPIX_COUNT;
             }
 
-            const uint8_t red   = pixComponentValue(_red,   pix);
-            const uint8_t green = pixComponentValue(_green, pix);
-            const uint8_t blue  = pixComponentValue(_blue,  pix);
+            const uint8_t red   = pixComponentValue(r, pix);
+            const uint8_t green = pixComponentValue(g, pix);
+            const uint8_t blue  = pixComponentValue(b, pix);
 
             appendToPwm(green, pos);
             appendToPwm(red,   pos);
