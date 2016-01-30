@@ -8,6 +8,16 @@
 #define NEOPIX_COUNT 24
 #define BUF_ELEMENTS ((NEOPIX_COUNT * 3 * 8) + 1)
 
+extern "C" void neopix_dmaComplete()
+{
+    if(DMA_GetITStatus(DMA1_Stream4, DMA_IT_TCIF4))
+    {
+        DMA_ClearITPendingBit(DMA1_Stream4, DMA_IT_TCIF4);
+        DMA_Cmd(DMA1_Stream4, DISABLE);
+        TIM_Cmd(TIM3, DISABLE);
+    }
+}
+
 namespace neopix
 {
 
@@ -19,7 +29,6 @@ uint8_t _green = 0;
 uint8_t _blue  = 128;
 
 uint32_t _lastUpdate               = 0;
-uint8_t _dmaActive                 = 0;
 uint16_t _pwmBuffer[BUF_ELEMENTS]  = { 0 };
 uint8_t _fadeFactors[NEOPIX_COUNT] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 6, 12, 36, 70, 135, 255 };
 uint8_t _currentPix                = 0;
@@ -117,6 +126,7 @@ void init()
     dmaInit.DMA_PeripheralBurst    = DMA_PeripheralBurst_Single;
     DMA_DeInit(DMA1_Stream4);
     DMA_Init(DMA1_Stream4, &dmaInit);
+    DMA_ITConfig(DMA1_Stream4, DMA_IT_TC, ENABLE);
 
     TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
     TIM_ARRPreloadConfig(TIM3, ENABLE);
@@ -124,32 +134,26 @@ void init()
     TIM_SelectCCDMA(TIM3, ENABLE);
     TIM_DMACmd(TIM3, TIM_DMA_CC1, ENABLE);
 
+    NVIC_InitTypeDef nvicInit                  = { 0 };
+    nvicInit.NVIC_IRQChannel                   = DMA1_Stream4_IRQn;
+    nvicInit.NVIC_IRQChannelPreemptionPriority = 4;
+    nvicInit.NVIC_IRQChannelSubPriority        = 0;
+    nvicInit.NVIC_IRQChannelCmd                = ENABLE;
+    NVIC_Init(&nvicInit);
+
+    // Put out handler into the interrupt vector table
+    uint32_t* interruptTable = (uint32_t*)SCB->VTOR;
+    interruptTable[31] = (uint32_t)&neopix_dmaComplete;
+
     _lastUpdate = micros();
 }
 
 void update(uint32_t now)
 {
     const uint32_t elapsed = now - _lastUpdate;
-    if(elapsed < (50 * 1000))
+    if((elapsed < (50 * 1000)) || (DMA_GetCmdStatus(DMA1_Stream4) == ENABLE))
     {
-        // Not time for an update. Switch of the timers if the last DMA is done.
-        if(_dmaActive)
-        {
-            switch(dma::checkStatus(DMA1_Stream4))
-            {
-            case dma::InProgress:
-                break;
-            case dma::Complete:
-            case dma::Error:
-                _dmaActive = 0;
-                DMA_Cmd(DMA1_Stream4, DISABLE);
-                TIM_Cmd(TIM3, DISABLE);
-            }
-        }
-    }
-    else if(_dmaActive)
-    {
-        // Time for an update but the last DMA transfer is still going.
+        // Not time for an update, or previous DMA still going.
     }
     else
     {
@@ -171,13 +175,11 @@ void update(uint32_t now)
             appendToPwm(blue,  pos);
         }
 
-        DMA_SetCurrDataCounter(DMA1_Stream4, BUF_ELEMENTS);
         DMA_Cmd(DMA1_Stream4, ENABLE);
         TIM_Cmd(TIM3, ENABLE);
 
         _currentPix = (_currentPix == 0) ? (NEOPIX_COUNT - 1) : (_currentPix - 1);
         _lastUpdate = now;
-        _dmaActive  = 1;
     }
 }
 
