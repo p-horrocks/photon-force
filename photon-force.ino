@@ -1,5 +1,7 @@
 #include "application.h"
 
+#include "audio.h"
+#include "audio_data.h"
 #include "dma.h"
 #include "iremitter.h"
 #include "irreader.h"
@@ -49,6 +51,7 @@ void setup()
     irreader::init();
     iremitter::init();
     trigger::init();
+    audio::init();
 
     serialstream::print("*** PhotonForce " VERSION " ***\r\n");
 }
@@ -66,5 +69,6 @@ void loop()
         serialstream::print("Firing\r\n");
 
         iremitter::sendCode(settings::ourIrCode());
+        audio::play();
     }
 }

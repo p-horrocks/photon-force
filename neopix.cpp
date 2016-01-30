@@ -140,7 +140,7 @@ void init()
 
     // Put out handler into the interrupt vector table
     uint32_t* interruptTable = (uint32_t*)SCB->VTOR;
-    interruptTable[31] = (uint32_t)&neopix_dmaComplete;
+    interruptTable[dma::IrqDMA1_Stream4] = (uint32_t)&neopix_dmaComplete;
 
     _lastUpdate = micros();
 }
