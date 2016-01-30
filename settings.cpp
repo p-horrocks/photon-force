@@ -12,7 +12,7 @@ uint32_t ourIrCode()
 
 RateOfFire rateOfFire()
 {
-    return RofSemiAuto;
+    return Rof600rpm;
 }
 
 } // namespace settings

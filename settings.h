@@ -14,7 +14,8 @@ enum RateOfFire
 {
     RofSemiAuto,
     Rof60rpm,
-    Rof300rpm
+    Rof300rpm,
+    Rof600rpm
 };
 RateOfFire rateOfFire();
 

@@ -42,7 +42,21 @@ uint8_t shouldFire(uint32_t now)
 
     const uint8_t isPressed        = (digitalRead(D2) == LOW);
     const settings::RateOfFire rof = settings::rateOfFire();
-    if(rof == settings::RofSemiAuto)
+
+    uint32_t delay = 0;
+    switch(settings::rateOfFire())
+    {
+    case settings::RofSemiAuto:
+        delay = 0; break;
+    case settings::Rof60rpm:
+        delay = 1000000; break;
+    case settings::Rof300rpm:
+        delay = 200000; break;
+    case settings::Rof600rpm:
+        delay = 100000; break;
+    }
+
+    if(delay == 0)
     {
         // If we're on semi-auto then a shot is allowed if the trigger has been
         // both released and pressed since the last shot.
@@ -57,7 +71,6 @@ uint8_t shouldFire(uint32_t now)
     {
         // Full auto. Trigger doesn't need to have been released, just the
         // trigger still be down and the required time to have passed.
-        const uint32_t delay = (rof == settings::Rof300rpm) ? 200000 : 1000000;
         if(isPressed && (elapsed >= delay))
         {
             _isReleased = 0;
