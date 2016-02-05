@@ -68,7 +68,7 @@ Status checkStatus(DMA_Stream_TypeDef* stream)
     }
     else
     {
-        return;
+        return Error;
     }
 
     if(DMA_GetFlagStatus(stream, _dmaStreamFlags[idx].fifoError))
