@@ -2,7 +2,7 @@ export PLATFORM=photon
 export APP=photon-force
 
 all:
-	$(MAKE) -C ../photon-firmware
+	$(MAKE) -C ../photon-firmware/main
 
 install: all
-	cd ../photon-firmware && particle flash NAME build/target/user-part/platform-6-m/photon-force.bin
+	$(MAKE) -C ../photon-firmware/main program-dfu
