@@ -41,7 +41,6 @@ uint8_t shouldFire(uint32_t now)
         return 0;
 
     const uint8_t isPressed        = (digitalRead(D2) == LOW);
-    const settings::RateOfFire rof = settings::rateOfFire();
 
     uint32_t delay = 0;
     switch(settings::rateOfFire())
