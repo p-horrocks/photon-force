@@ -13,6 +13,8 @@
 #define VERSION "0.1"
 
 SYSTEM_MODE(MANUAL);
+PRODUCT_ID(PLATFORM_ID);
+PRODUCT_VERSION(2);
 
 // Photon pin assignments
 // ----------------------

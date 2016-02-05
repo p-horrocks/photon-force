@@ -40,7 +40,7 @@ uint8_t shouldFire(uint32_t now)
     if(elapsed < MIN_DELAY)
         return 0;
 
-    const uint8_t isPressed        = (digitalRead(D2) == LOW);
+    const uint8_t isPressed = (digitalRead(D2) == LOW);
 
     uint32_t delay = 0;
     switch(settings::rateOfFire())

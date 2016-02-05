@@ -16,3 +16,4 @@ settings.cpp
 settings.h
 trigger.cpp
 trigger.h
+photon-force.cpp
