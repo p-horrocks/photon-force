@@ -7,7 +7,7 @@ namespace settings
 
 uint32_t ourIrCode()
 {
-    return 0x4ebb7887;
+    return 0x4ebb708f;
 }
 
 RateOfFire rateOfFire()

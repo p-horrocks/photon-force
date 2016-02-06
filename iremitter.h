@@ -6,6 +6,7 @@ namespace iremitter
 
 void init();
 void sendCode(uint32_t code);
+void update();
 
 } // namespace iremitter
 

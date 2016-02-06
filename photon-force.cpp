@@ -55,6 +55,10 @@ void setup()
     trigger::init();
     audio::init();
 
+    // Sending serial data too soon can mean that it gets sent before the
+    // receiver has had a chance to reconnect after the Photon rebooted.
+    delay(1000);
+
     serialstream::print("*** PhotonForce " VERSION " ***\r\n");
 }
 
@@ -65,6 +69,7 @@ void loop()
     serialstream::update();
     neopix::update(now);
     irreader::update(now);
+    iremitter::update();
 
     if(trigger::shouldFire(now))
     {
