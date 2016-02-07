@@ -11,14 +11,22 @@
 // http://lirc.sourceforge.net/remotes/generic/NEC.conf
 
 // These values are in number of timer ticks (approx 26.3us per tick).
-#define START_PULSE 342 // 9000us
-#define START_GAP   171 // 4500us
-#define ONE_PULSE   21  // 562us
-#define ONE_GAP     21  // 562us
-#define NIL_PULSE   21  // 562us
-#define NIL_GAP     64  // 1687us
-#define END_PULSE   21  // 562us
-#define END_GAP     21  // 562us
+//#define START_PULSE 342 // 9000us
+//#define START_GAP   171 // 4500us
+//#define ONE_PULSE   21  // 562us
+//#define ONE_GAP     21  // 562us
+//#define NIL_PULSE   21  // 562us
+//#define NIL_GAP     64  // 1687us
+//#define END_PULSE   21  // 562us
+//#define END_GAP     21  // 562us
+#define START_PULSE 256 // 9000us
+#define START_GAP   128 // 4500us
+#define ONE_PULSE   16  // 562us
+#define ONE_GAP     16  // 562us
+#define NIL_PULSE   16  // 562us
+#define NIL_GAP     48  // 1687us
+#define END_PULSE   16  // 562us
+#define END_GAP     16  // 562us
 
 namespace iremitter
 {
@@ -45,7 +53,7 @@ uint8_t fillBuffer(Status status)
     if((status != FrontBuffer) && (status != BackBuffer))
     {
         //remove-me
-        serialstream::print("-E");
+//        serialstream::print("-E");
         return 0;
     }
 
@@ -56,14 +64,14 @@ uint8_t fillBuffer(Status status)
     uint8_t retval = ((_chunkPos < IR_CHUNKS) || (status != BackBuffer));
 
     //remove-me
-    if(status == FrontBuffer)
-    {
-        serialstream::print("-F ");
-    }
-    else
-    {
-        serialstream::print("-B ");
-    }
+//    if(status == FrontBuffer)
+//    {
+//        serialstream::print("-F ");
+//    }
+//    else
+//    {
+//        serialstream::print("-B ");
+//    }
 
     uint16_t* buf = _pwmBuffer + ((status == FrontBuffer) ? 0 : (BUF_ELEMENTS / 2));
     int len = BUF_ELEMENTS / 2;
@@ -95,10 +103,10 @@ uint8_t fillBuffer(Status status)
     }
 
     //remove-me
-    serialstream::printNum(_chunkPos);
-    serialstream::print(" ");
-    serialstream::printNum(_tickCounts[_chunkPos]);
-    serialstream::print("\r\n");
+//    serialstream::printNum(_chunkPos);
+//    serialstream::print(" ");
+//    serialstream::printNum(_tickCounts[_chunkPos]);
+//    serialstream::print("\r\n");
 
     // Always continue filling. Zeros will get padded until the DMA has finished
     // the buffer - which is caught at the start of this function.
@@ -110,7 +118,7 @@ extern "C" void iremitter_dmaProgress()
     if(DMA_GetITStatus(DMA1_Stream0, DMA_IT_HTIF0))
     {
         //remove-me
-        serialstream::print("H");
+//        serialstream::print("H");
 
         // Transfer half complete - fill the first half of the buffer that we
         // just finished sending.
@@ -125,14 +133,14 @@ extern "C" void iremitter_dmaProgress()
     if(DMA_GetITStatus(DMA1_Stream0, DMA_IT_TCIF0))
     {
         //remove-me
-        serialstream::print("C");
+//        serialstream::print("C");
 
         // Transfer compete. Re-fill the second half of the buffer (since the
         // DMA is circular). If there is no more to send then stop the DMA.
         if(_status == Finished)
         {
             //remove-me
-            serialstream::print("D\r\n");
+//            serialstream::print("D\r\n");
 
             DMA_Cmd(DMA1_Stream0, DISABLE);
             TIM_Cmd(TIM4, DISABLE);
@@ -259,13 +267,13 @@ void sendCode(uint32_t code)
     _tickCounts[n++] = END_GAP;
 
     // remove-me
-    serialstream::print("Tick counts:\r\n");
-    for(int i = 0; i < IR_CHUNKS; ++i)
-    {
-        serialstream::printNum(_tickCounts[i]);
-        serialstream::printCh(' ');
-    }
-    serialstream::print("\r\n");
+//    serialstream::print("Tick counts:\r\n");
+//    for(int i = 0; i < IR_CHUNKS; ++i)
+//    {
+//        serialstream::printNum(_tickCounts[i]);
+//        serialstream::printCh(' ');
+//    }
+//    serialstream::print("\r\n");
 
     // Fill the initial buffer.
     fillBuffer(FrontBuffer);

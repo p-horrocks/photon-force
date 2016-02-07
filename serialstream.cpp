@@ -2,7 +2,7 @@
 
 #include "serialstream.h"
 
-#define BUFFER_LEN 256
+#define BUFFER_LEN 512
 
 namespace serialstream
 {
