@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Tue 09 Feb 2016 15:46:54 AEDT
+EESchema-DOCLIB  Version 2.0  Date: Sat 13 Feb 2016 22:44:42 AEDT
 #
 $CMP GENERIC_CAPACITOR
 D Generic capacitor
@@ -20,6 +20,12 @@ $CMP PHOTON
 D Particle Photon - dev board for P0 module
 K particle photon P0
 F https://docs.particle.io/datasheets/kits/photon/
+$ENDCMP
+#
+$CMP SN74HC165
+D WS2818B RGB LED with integrated controller (aka NeoPixel)
+K WS2812B RGB LED NEOPIXEL
+F http://www.world-semi.com/uploads/soft/150522/1-150522091P5.pdf
 $ENDCMP
 #
 $CMP WS2812B
