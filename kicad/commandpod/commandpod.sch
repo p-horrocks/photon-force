@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 6
 Title ""
-Date "16 feb 2016"
+Date "18 feb 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -108,50 +108,4 @@ Wire Wire Line
 	7400 4100 7400 4150
 Wire Wire Line
 	7400 4150 7650 4150
-$Sheet
-S 1600 1500 1700 1350
-U 56BF0EB9
-F0 "Gun" 50
-F1 "gun.sch" 50
-$EndSheet
-$Sheet
-S 9700 2500 1200 1050
-U 56BF2119
-F0 "Sensor Pod (back)" 50
-F1 "sensorpod.sch" 50
-F2 "NeoPixels" I L 9700 2700 60 
-F3 "IR Recv Enable" I L 9700 2900 60 
-F4 "IR Recv Clock" I L 9700 3100 60 
-F5 "IR Recv Output" O L 9700 3300 60 
-$EndSheet
-$Sheet
-S 9700 1000 1200 1050
-U 56BF0E3B
-F0 "Sensor Pod (chest)" 50
-F1 "sensorpod.sch" 50
-F2 "NeoPixels" I L 9700 1200 60 
-F3 "IR Recv Enable" I L 9700 1400 60 
-F4 "IR Recv Clock" I L 9700 1600 60 
-F5 "IR Recv Output" O L 9700 1800 60 
-$EndSheet
-$Sheet
-S 9700 5700 1200 1050
-U 56C34A19
-F0 "Sensor Pod (left)" 50
-F1 "sensorpod.sch" 50
-F2 "NeoPixels" I L 9700 5900 60 
-F3 "IR Recv Enable" I L 9700 6100 60 
-F4 "IR Recv Clock" I L 9700 6300 60 
-F5 "IR Recv Output" O L 9700 6500 60 
-$EndSheet
-$Sheet
-S 9700 4100 1200 1050
-U 56C34E98
-F0 "Sensor Pod (right)" 50
-F1 "sensorpod.sch" 50
-F2 "NeoPixels" I L 9700 4300 60 
-F3 "IR Recv Enable" I L 9700 4500 60 
-F4 "IR Recv Clock" I L 9700 4700 60 
-F5 "IR Recv Output" O L 9700 4900 60 
-$EndSheet
 $EndSCHEMATC
