@@ -1,4 +1,4 @@
-update=Thu 18 Feb 2016 13:01:33 AEDT
+update=Thu 18 Feb 2016 16:44:42 AEDT
 version=1
 last_client=eeschema
 [cvpcb]
@@ -47,7 +47,7 @@ LibName16=valves
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../../kicad
 NetFmtName=
 RptD_X=0
 RptD_Y=100
