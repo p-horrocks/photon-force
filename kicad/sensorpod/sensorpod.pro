@@ -1,6 +1,6 @@
-update=Thu 18 Feb 2016 22:17:45 AEDT
+update=Fri 19 Feb 2016 22:01:15 AEDT
 version=1
-last_client=cvpcb
+last_client=pcbnew
 [general]
 version=1
 [eeschema]
@@ -43,14 +43,19 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=parts
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=
-UseCmpFile=1
-PadDrill=0.600000000000
-PadDrillOvalY=0.600000000000
-PadSizeH=1.500000000000
-PadSizeV=1.500000000000
+LastNetListRead=sensorpod.net
+UseCmpFile=0
+PadDrill=1.016000000000
+PadDrillOvalY=1.016000000000
+PadSizeH=1.524000000000
+PadSizeV=1.524000000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
@@ -63,6 +68,7 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
+LibDir=../../kicad
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -80,9 +86,3 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=footprints
-LibDir=../../kicad
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms

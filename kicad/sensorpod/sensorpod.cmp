@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Thu 18 Feb 2016 22:20:14 AEDT
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Sat 20 Feb 2016 17:22:38 AEDT
 
 BeginCmp
 TimeStamp = /56BF0FF4;
@@ -291,7 +291,7 @@ BeginCmp
 TimeStamp = /56C5465E;
 Reference = M1;
 ValeurCmp = MOTOR;
-IdModule  = ;
+IdModule  = Header_2x1;
 EndCmp
 
 BeginCmp
@@ -577,6 +577,13 @@ EndCmp
 BeginCmp
 TimeStamp = /56C301AF;
 Reference = R15;
+ValeurCmp = GENERIC_RESISTOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56C80A0B;
+Reference = R16;
 ValeurCmp = GENERIC_RESISTOR;
 IdModule  = 0805;
 EndCmp
