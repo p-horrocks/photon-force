@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Sat 20 Feb 2016 17:22:38 AEDT
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Mon 22 Feb 2016 22:58:29 AEDT
 
 BeginCmp
 TimeStamp = /56BF0FF4;
@@ -85,90 +85,6 @@ IdModule  = 0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /56BF2132;
-Reference = C13;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF217B;
-Reference = C14;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2181;
-Reference = C15;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2187;
-Reference = C16;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF218D;
-Reference = C17;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2193;
-Reference = C18;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2199;
-Reference = C19;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF219F;
-Reference = C20;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF21A5;
-Reference = C21;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF21AB;
-Reference = C22;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF21B1;
-Reference = C23;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF21B7;
-Reference = C24;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C54B09;
 Reference = C25;
 ValeurCmp = GENERIC_CAPACITOR;
@@ -211,27 +127,6 @@ IdModule  = 0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /56C3287B;
-Reference = C31;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C32851;
-Reference = C32;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C30137;
-Reference = C33;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C55626;
 Reference = D1;
 ValeurCmp = GENERIC_DIODE;
@@ -262,27 +157,6 @@ EndCmp
 BeginCmp
 TimeStamp = /56C301FA;
 Reference = IR4;
-ValeurCmp = TSOP38438;
-IdModule  = Minicast;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C30209;
-Reference = IR5;
-ValeurCmp = TSOP38438;
-IdModule  = Minicast;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C30218;
-Reference = IR6;
-ValeurCmp = TSOP38438;
-IdModule  = Minicast;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C30227;
-Reference = IR7;
 ValeurCmp = TSOP38438;
 IdModule  = Minicast;
 EndCmp
@@ -379,90 +253,6 @@ IdModule  = 5050;
 EndCmp
 
 BeginCmp
-TimeStamp = /56BF2120;
-Reference = NP13;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2126;
-Reference = NP14;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF212C;
-Reference = NP15;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF213F;
-Reference = NP16;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2145;
-Reference = NP17;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF214B;
-Reference = NP18;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2151;
-Reference = NP19;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2157;
-Reference = NP20;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF215D;
-Reference = NP21;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2163;
-Reference = NP22;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF2169;
-Reference = NP23;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56BF216F;
-Reference = NP24;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C54533;
 Reference = P1;
 ValeurCmp = HEADER_(8_WAY);
@@ -505,34 +295,6 @@ IdModule  = 0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /56C328C6;
-Reference = R5;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C3289C;
-Reference = R6;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C32872;
-Reference = R7;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C326CB;
-Reference = R8;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C3292A;
 Reference = R9;
 ValeurCmp = GENERIC_RESISTOR;
@@ -556,27 +318,6 @@ EndCmp
 BeginCmp
 TimeStamp = /56C328AC;
 Reference = R12;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C32882;
-Reference = R13;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C32858;
-Reference = R14;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C301AF;
-Reference = R15;
 ValeurCmp = GENERIC_RESISTOR;
 IdModule  = 0805;
 EndCmp
