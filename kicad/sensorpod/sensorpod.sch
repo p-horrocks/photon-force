@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 feb 2016"
+Date "23 feb 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1311,10 +1311,6 @@ F 3 "" H 5150 800 60  0000 C CNN
 	1    5150 800 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5300 900  5150 900 
-Wire Wire Line
-	5150 900  5150 800 
 $Comp
 L GND #PWR029
 U 1 1 56C547AB
@@ -1327,21 +1323,11 @@ F 3 "" H 5750 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 1200 5750 1200
-Wire Wire Line
 	5750 1200 5750 1300
-Wire Wire Line
-	2150 1000 5300 1000
 Wire Wire Line
 	6100 4800 6100 1000
 Wire Wire Line
-	6100 1000 5600 1000
-Wire Wire Line
 	6000 4900 6000 1100
-Wire Wire Line
-	6000 1100 5600 1100
-Wire Wire Line
-	5600 900  6200 900 
 Wire Wire Line
 	6200 900  6200 2500
 Wire Wire Line
@@ -1360,9 +1346,7 @@ F 3 "" H 5150 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 1200 5150 1200
-Wire Wire Line
-	5150 1200 5150 1300
+	5150 1100 5150 1300
 $Comp
 L IRFML8244TRPBF Q1
 U 1 1 56C542B5
@@ -1388,11 +1372,9 @@ $EndComp
 Wire Wire Line
 	5000 3700 5000 3950
 Wire Wire Line
-	4700 3450 4300 3450
+	4300 3450 4700 3450
 Wire Wire Line
-	4300 3450 4300 1100
-Wire Wire Line
-	4300 1100 5300 1100
+	4300 900  4300 3450
 $Comp
 L MOTOR M1
 U 1 1 56C5465E
@@ -1503,4 +1485,26 @@ Connection ~ 7900 5650
 Wire Wire Line
 	7650 5350 7900 5350
 Connection ~ 7900 5350
+Wire Wire Line
+	4300 900  5300 900 
+Wire Wire Line
+	5300 1000 5150 1000
+Wire Wire Line
+	5150 1000 5150 800 
+Wire Wire Line
+	5150 1100 5300 1100
+Wire Wire Line
+	5300 1200 2450 1200
+Wire Wire Line
+	2450 1200 2450 1000
+Wire Wire Line
+	2450 1000 2150 1000
+Wire Wire Line
+	5600 1200 5750 1200
+Wire Wire Line
+	6000 1100 5600 1100
+Wire Wire Line
+	6100 1000 5600 1000
+Wire Wire Line
+	5600 900  6200 900 
 $EndSCHEMATC
