@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Mon 22 Feb 2016 22:58:29 AEDT
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Fri 26 Feb 2016 10:40:37 AEDT
 
 BeginCmp
 TimeStamp = /56BF0FF4;
@@ -80,6 +80,34 @@ EndCmp
 BeginCmp
 TimeStamp = /56BF161B;
 Reference = C12;
+ValeurCmp = GENERIC_CAPACITOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9052;
+Reference = C13;
+ValeurCmp = GENERIC_CAPACITOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9059;
+Reference = C14;
+ValeurCmp = GENERIC_CAPACITOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9060;
+Reference = C15;
+ValeurCmp = GENERIC_CAPACITOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9067;
+Reference = C16;
 ValeurCmp = GENERIC_CAPACITOR;
 IdModule  = 0805;
 EndCmp
@@ -248,6 +276,34 @@ EndCmp
 BeginCmp
 TimeStamp = /56BF1123;
 Reference = NP12;
+ValeurCmp = WS2812B;
+IdModule  = 5050;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9033;
+Reference = NP13;
+ValeurCmp = WS2812B;
+IdModule  = 5050;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9039;
+Reference = NP14;
+ValeurCmp = WS2812B;
+IdModule  = 5050;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF903F;
+Reference = NP15;
+ValeurCmp = WS2812B;
+IdModule  = 5050;
+EndCmp
+
+BeginCmp
+TimeStamp = /56CF9045;
+Reference = NP16;
 ValeurCmp = WS2812B;
 IdModule  = 5050;
 EndCmp
