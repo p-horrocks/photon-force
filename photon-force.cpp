@@ -24,24 +24,24 @@ PRODUCT_VERSION(2);
 // relatively in-sync with reality.
 //
 // Function         Requires  Pin      TIM  DMA1
-// --------------------------------------------
-//                            D0/PB7  (4.2)
-// IR send          timer/DMA D1/PB6   4.1  0.2
-// Trigger          interrupt D2/PB5  (3.2)
-// NeoPixel circle  timer/DMA D3/PB4   3.1  4.5
+// --------------------------------------------------
+// Haptic           I2C       D0/PB7  (4.2) (3.2) SDA
+// Haptic           I2C       D1/PB6  (4.1) (0.2) SCL
+// Trigger          interrupt D2/PB5  (3.2) (5.5)
+// NeoPixel circle  timer/DMA D3/PB4   3.1   4.5
 // IR recv (enable) -         D4/PB3
 // IR recv (clk)    -         D5/PA15
-// Haptic           -         D6/PA14
+//                            D6/PA14
 //                            D7/PA13
 //
 // Power (sense)    ADC       A0/PC5
 // IR recv (input1) 5V        A1/PC3
 // IR recv (input2) 5V        A2/PC2
 // Power (enable)   -         A3/PA5
-// IR recv (input3) 5V        A4/PA6  (3.1)
-// IR recv (input4) 5V        A5/PA7  (3.2)
-// Audio            DAC/DMA   DAC/PA4  7    5.7
-//                            WKP/PA0 (5.1)
+// IR recv (input3) 5V        A4/PA6  (3.1) (4.5)
+// IR recv (input4) 5V        A5/PA7  (3.2) (5.5)
+// Audio            DAC/DMA   DAC/PA4  7     5.7
+// IR send          timer/DMA WKP/PA0  5.1   2.6
 
 // Note: interrupt not available on D0
 
