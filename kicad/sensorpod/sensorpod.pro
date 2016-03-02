@@ -1,8 +1,6 @@
-update=Fri 19 Feb 2016 22:01:15 AEDT
+update=Wed 02 Mar 2016 11:31:06 AEDT
 version=1
-last_client=pcbnew
-[general]
-version=1
+last_client=kicad
 [eeschema]
 version=1
 LibDir=../../kicad
@@ -86,3 +84,5 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=footprints
+[general]
+version=1
