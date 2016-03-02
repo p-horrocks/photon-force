@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Wed 02 Mar 2016 10:49:14 AEDT
+EESchema-DOCLIB  Version 2.0  Date: Wed 02 Mar 2016 22:43:28 AEDT
 #
 $CMP GENERIC_CAPACITOR
 D Generic capacitor
@@ -26,6 +26,11 @@ $CMP SN74HC165
 D WS2818B RGB LED with integrated controller (aka NeoPixel)
 K WS2812B RGB LED NEOPIXEL
 F http://www.world-semi.com/uploads/soft/150522/1-150522091P5.pdf
+$ENDCMP
+#
+$CMP VARIABLE_RESISTOR
+D Generic resistor
+K generic resistor
 $ENDCMP
 #
 $CMP WS2812B
