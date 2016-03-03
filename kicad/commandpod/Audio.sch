@@ -268,11 +268,7 @@ F 5 "~" H 6360 4170 60  0001 C CNN "Part #"
 	1    6050 4050
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6050 3200 6050 3900
 Connection ~ 6050 3700
-Wire Wire Line
-	6050 4250 6050 4100
 Wire Wire Line
 	5850 4250 6050 4250
 Wire Wire Line
@@ -288,4 +284,8 @@ Wire Wire Line
 	5800 3700 6050 3700
 Wire Wire Line
 	6750 3400 7300 3400
+Wire Wire Line
+	6050 4250 6050 4200
+Wire Wire Line
+	6050 3200 6050 3900
 $EndSCHEMATC
