@@ -17,3 +17,4 @@ settings.h
 trigger.cpp
 trigger.h
 photon-force.cpp
+tasks.txt

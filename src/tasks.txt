@@ -1,0 +1,20 @@
+P-01   Done Prototype NeoPixels
+P-02   Done Prototype IR receivers + shift reg
+P-03        Prototype Audio output
+P-03.1      SOT-23 / SOIC-16 adapter boards
+P-04        Prototype Motor control
+P-05        Prototype Power supply
+P-06        Prototype Battery charger
+P-07        Prototype IR emitter with lense + barrel
+ebay
+S-01   Done Sensor pod schematic
+S-02        Sensor pod PCB
+S-03        Sensor pod procurement
+S-04        Sensor pod assembly
+
+C-01        Command pod schematic
+C-02        Command pod PCB
+C-03        Command pod procurement
+C-04        Command pod assembly
+
+F-01        Integration testing
