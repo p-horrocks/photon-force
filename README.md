@@ -29,3 +29,36 @@ the project, they just make is easier to use Qt Creator as the IDE:
   photon-force.creator
   photon-force.files
   photon-force.includes
+
+# Gerber generation
+
+From within PCBNew:
+- File->Plot
+- Check Layers
+    F.Cu
+    B.Cu
+    F.SilkS
+    B.SilkS
+    F.Mask
+    B.Mask
+    Edge.Cuts
+- Check Options
+    Plot module value on silkscreen
+    Plot module reference on silkscreen
+    Plot other module texts on silkscreen
+    Exclude PCB edge layer from other layers
+- Check Gerber Options
+    Use proper filename extensions
+- Click 'Plot'
+- Click 'Generate Drill File'
+- Check Drill Units: Inches
+- Check Zeros Format: Suppress leading zeros
+- Check Drill Map File Format: Gerber
+- Check Options: Minimal header
+- Check Drill Origin: Absolute
+- Click 'Drill File'
+- Remove layer names from plot files (so they're all <name>.gXX)
+- Rename *.gbr to *.gml
+- Rename *.drl to *.txt
+- zip with zip -r <zip file> <name>.*
+- zip file ready for upload!
