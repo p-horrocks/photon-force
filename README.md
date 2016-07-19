@@ -34,6 +34,7 @@ the project, they just make is easier to use Qt Creator as the IDE:
 
 From within PCBNew:
 - File->Plot
+- Plot format: Gerber
 - Check Layers
     F.Cu
     B.Cu
@@ -47,12 +48,13 @@ From within PCBNew:
     Plot module reference on silkscreen
     Plot other module texts on silkscreen
     Exclude PCB edge layer from other layers
+    Default line width 0.15mm
 - Check Gerber Options
     Use proper filename extensions
 - Click 'Plot'
 - Click 'Generate Drill File'
 - Check Drill Units: Inches
-- Check Zeros Format: Suppress leading zeros
+- Check Zeros Format: Decimal format
 - Check Drill Map File Format: Gerber
 - Check Options: Minimal header
 - Check Drill Origin: Absolute
