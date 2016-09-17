@@ -6,7 +6,7 @@
 
 // Each pixel requires a value per bit per colour component. One extra
 // to reset the output value when finished.
-#define NEOPIX_COUNT 24
+#define NEOPIX_COUNT 12
 #define BUF_ELEMENTS ((NEOPIX_COUNT * 3 * 8) + 1)
 
 extern "C" void neopix_dmaComplete()
@@ -27,7 +27,8 @@ namespace
 
 uint32_t _lastUpdate               = 0;
 uint16_t _pwmBuffer[BUF_ELEMENTS]  = { 0 };
-uint8_t _fadeFactors[NEOPIX_COUNT] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 6, 12, 36, 70, 135, 255 };
+//uint8_t _fadeFactors[NEOPIX_COUNT] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 6, 12, 36, 70, 135, 255 };
+uint8_t _fadeFactors[NEOPIX_COUNT] = { 0, 0, 0, 0, 1, 3, 6, 12, 36, 70, 135, 255 };
 uint8_t _currentPix                = 0;
 
 // Calcuate a colour channel value given the base value and the stage (used to
