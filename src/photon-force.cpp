@@ -71,19 +71,19 @@ void loop()
     serialstream::update();
     hitpoints::update(now);
     neopix::update(now);
-    irreader::update(now);
+    uint32_t code = irreader::update(now);
     iremitter::update();
 
-    if(trigger::shouldFire(now))
+    if(code)
     {
         hitpoints::applyHit(now);
     }
 
-//    if(trigger::shouldFire(now))
-//    {
-//        serialstream::print("Firing\r\n");
+    if(trigger::shouldFire(now))
+    {
+        serialstream::print("Firing\r\n");
 
-//        iremitter::sendCode(settings::ourIrCode());
-//        audio::play();
-//    }
+        iremitter::sendCode(settings::ourIrCode());
+        audio::play();
+    }
 }

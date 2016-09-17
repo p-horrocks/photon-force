@@ -5,7 +5,8 @@ namespace irreader
 {
 
 void init();
-void update(uint32_t now);
+// Returns any received code
+uint32_t update(uint32_t now);
 
 } // namespace irreader
 

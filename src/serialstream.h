@@ -16,6 +16,8 @@ void printNum(int n);
 void printNum(uint32_t n);
 void printNum(uint16_t n);
 void printNum(uint8_t n);
+void printHex(uint32_t n);
+void printHex(uint8_t n);
 
 } // namespace serialstream
 
