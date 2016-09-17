@@ -22,6 +22,12 @@ RateOfFire rateOfFire();
 // The LED colour to show.
 void ourColour(uint8_t& red, uint8_t& green, uint8_t& blue);
 
+// Returns the number of microseconds to stay dead for
+uint32_t reviveDelay();
+
+// Number of hits to receive before dying
+uint8_t maxHitPoints();
+
 } // namespace settings
 
 #endif // SETTINGS_H

@@ -1,6 +1,7 @@
 #include "application.h"
 
 #include "dma.h"
+#include "hitpoints.h"
 #include "neopix.h"
 #include "settings.h"
 
@@ -58,6 +59,42 @@ void appendToPwm(uint8_t value, int& pos)
             _pwmBuffer[pos++] = 8;
         }
         value <<= 1;
+    }
+}
+
+void createColourCyclePwm(uint8_t r, uint8_t g, uint8_t b)
+{
+    int pos = 0;
+    for(int i = 0; i < NEOPIX_COUNT; ++i)
+    {
+        int pix = i + _currentPix;
+        if(pix >= NEOPIX_COUNT)
+        {
+            pix -= NEOPIX_COUNT;
+        }
+
+        const uint8_t red   = pixComponentValue(r, pix);
+        const uint8_t green = pixComponentValue(g, pix);
+        const uint8_t blue  = pixComponentValue(b, pix);
+
+        appendToPwm(green, pos);
+        appendToPwm(red,   pos);
+        appendToPwm(blue,  pos);
+    }
+}
+
+void createRingPulsePwm(uint8_t r, uint8_t g, uint8_t b)
+{
+    const uint8_t red   = pixComponentValue(r, _currentPix);
+    const uint8_t green = pixComponentValue(g, _currentPix);
+    const uint8_t blue  = pixComponentValue(b, _currentPix);
+
+    int pos = 0;
+    for(int i = 0; i < NEOPIX_COUNT; ++i)
+    {
+        appendToPwm(green, pos);
+        appendToPwm(red,   pos);
+        appendToPwm(blue,  pos);
     }
 }
 
@@ -155,25 +192,17 @@ void update(uint32_t now)
     }
     else
     {
-        uint8_t r, g, b;
-        settings::ourColour(r, g, b);
-
-        int pos = 0;
-        for(int i = 0; i < NEOPIX_COUNT; ++i)
+        if(hitpoints::areWeDead())
         {
-            int pix = i + _currentPix;
-            if(pix >= NEOPIX_COUNT)
-            {
-                pix -= NEOPIX_COUNT;
-            }
-
-            const uint8_t red   = pixComponentValue(r, pix);
-            const uint8_t green = pixComponentValue(g, pix);
-            const uint8_t blue  = pixComponentValue(b, pix);
-
-            appendToPwm(green, pos);
-            appendToPwm(red,   pos);
-            appendToPwm(blue,  pos);
+            // We're dead - flash red
+            createRingPulsePwm(0xff, 0, 0);
+        }
+        else
+        {
+            // Not dead - do a colour cycle in our team colour
+            uint8_t r, g, b;
+            settings::ourColour(r, g, b);
+            createColourCyclePwm(r, g, b);
         }
 
         DMA_Cmd(DMA1_Stream4, ENABLE);

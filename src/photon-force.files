@@ -18,3 +18,5 @@ trigger.cpp
 trigger.h
 photon-force.cpp
 tasks.txt
+hitpoints.h
+hitpoints.cpp

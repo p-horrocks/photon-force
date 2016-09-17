@@ -3,6 +3,7 @@
 #include "audio.h"
 #include "audio_data.h"
 #include "dma.h"
+#include "hitpoints.h"
 #include "iremitter.h"
 #include "irreader.h"
 #include "neopix.h"
@@ -50,6 +51,7 @@ void setup()
     // serialstream must be initialised first.
     serialstream::init();
     neopix::init();
+    hitpoints::init();
     irreader::init();
     iremitter::init();
     trigger::init();
@@ -67,15 +69,21 @@ void loop()
     uint32_t now = micros();
 
     serialstream::update();
+    hitpoints::update(now);
     neopix::update(now);
     irreader::update(now);
     iremitter::update();
 
     if(trigger::shouldFire(now))
     {
-        serialstream::print("Firing\r\n");
-
-        iremitter::sendCode(settings::ourIrCode());
-        audio::play();
+        hitpoints::applyHit(now);
     }
+
+//    if(trigger::shouldFire(now))
+//    {
+//        serialstream::print("Firing\r\n");
+
+//        iremitter::sendCode(settings::ourIrCode());
+//        audio::play();
+//    }
 }
