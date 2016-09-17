@@ -20,6 +20,13 @@ https://docs.npmjs.com/getting-started/fixing-npm-permissions
 Next, create a symlink in firmware/user/applications to where this source is
 checked out.
 
+# Flashing
+
+Plug the Photon into a USB port. Once it has powered up, hold down the setup
+button then tap the reset button. The status LED will flash magenta for a few
+seconds then flash yellow, release the setup button. With the LED flashing
+yellow run 'make install' and the firmware will be uploaded using dfu.
+
 # Qt Creator
 
 These files are the Qt Creator project files, they're not needed to compile
