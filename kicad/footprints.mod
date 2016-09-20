@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Fri 19 Feb 2016 21:59:10 AEDT
+PCBNEW-LibModule-V1  Tue 20 Sep 2016 12:27:53 AEST
 # encoding utf-8
 Units mm
 $INDEX
@@ -196,7 +196,7 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE Header_4x2
 $MODULE Minicast
-Po 0 0 0 15 56C6F408 00000000 ~~
+Po 0 0 0 15 57E09E8F 00000000 ~~
 Li Minicast
 Cd Minicast
 Kw Minicast
@@ -211,14 +211,14 @@ DA -1.27 0 1.905 -3.175 900 0.15 21
 DS -1.905 -4.445 1.905 -4.445 0.15 21
 DS 1.905 4.445 -1.905 4.445 0.15 21
 $PAD
-Sh "2" C 1.778 1.778 0 0 0
+Sh "3" C 1.778 1.778 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po 0 -2.54
 $EndPAD
 $PAD
-Sh "3" C 1.778 1.778 0 0 0
+Sh "2" C 1.778 1.778 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""

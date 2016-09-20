@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Fri 26 Feb 2016 10:40:37 AEDT
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Tue 20 Sep 2016 12:34:44 AEST
 
 BeginCmp
 TimeStamp = /56BF0FF4;
@@ -85,41 +85,6 @@ IdModule  = 0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /56CF9052;
-Reference = C13;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56CF9059;
-Reference = C14;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56CF9060;
-Reference = C15;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56CF9067;
-Reference = C16;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C54B09;
-Reference = C25;
-ValeurCmp = GENERIC_CAPACITOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C300CE;
 Reference = C26;
 ValeurCmp = GENERIC_CAPACITOR;
@@ -155,13 +120,6 @@ IdModule  = 0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /56C55626;
-Reference = D1;
-ValeurCmp = GENERIC_DIODE;
-IdModule  = SOD-323;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C301CD;
 Reference = IR1;
 ValeurCmp = TSOP38438;
@@ -187,13 +145,6 @@ TimeStamp = /56C301FA;
 Reference = IR4;
 ValeurCmp = TSOP38438;
 IdModule  = Minicast;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C5465E;
-Reference = M1;
-ValeurCmp = MOTOR;
-IdModule  = Header_2x1;
 EndCmp
 
 BeginCmp
@@ -281,45 +232,10 @@ IdModule  = 5050;
 EndCmp
 
 BeginCmp
-TimeStamp = /56CF9033;
-Reference = NP13;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56CF9039;
-Reference = NP14;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56CF903F;
-Reference = NP15;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
-TimeStamp = /56CF9045;
-Reference = NP16;
-ValeurCmp = WS2812B;
-IdModule  = 5050;
-EndCmp
-
-BeginCmp
 TimeStamp = /56C54533;
 Reference = P1;
 ValeurCmp = HEADER_(8_WAY);
 IdModule  = Header_4x2;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C542B5;
-Reference = Q1;
-ValeurCmp = IRFML8244TRPBF;
-IdModule  = SOT-23;
 EndCmp
 
 BeginCmp
@@ -374,13 +290,6 @@ EndCmp
 BeginCmp
 TimeStamp = /56C328AC;
 Reference = R12;
-ValeurCmp = GENERIC_RESISTOR;
-IdModule  = 0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /56C80A0B;
-Reference = R16;
 ValeurCmp = GENERIC_RESISTOR;
 IdModule  = 0805;
 EndCmp
