@@ -1,0 +1,80 @@
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Wed 21 Sep 2016 17:08:25 AEST
+
+BeginCmp
+TimeStamp = /57E12194;
+Reference = P1;
+ValeurCmp = HEADER_5X2;
+IdModule  = Header_5x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E11ACB;
+Reference = P2;
+ValeurCmp = HEADER_(8_WAY);
+IdModule  = Header_4x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E11AE4;
+Reference = P3;
+ValeurCmp = HEADER_(8_WAY);
+IdModule  = Header_4x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E11B16;
+Reference = P4;
+ValeurCmp = HEADER_(8_WAY);
+IdModule  = Header_4x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E11AFD;
+Reference = P5;
+ValeurCmp = HEADER_(8_WAY);
+IdModule  = Header_4x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E229BF;
+Reference = Q1;
+ValeurCmp = IRFML8244TRPBF;
+IdModule  = SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E229D8;
+Reference = Q2;
+ValeurCmp = IRFML8244TRPBF;
+IdModule  = SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E22B1A;
+Reference = Q3;
+ValeurCmp = IRFML8244TRPBF;
+IdModule  = SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E22CAB;
+Reference = R1;
+ValeurCmp = GENERIC_RESISTOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E22D04;
+Reference = R2;
+ValeurCmp = GENERIC_RESISTOR;
+IdModule  = 0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /57E22D0C;
+Reference = R3;
+ValeurCmp = GENERIC_RESISTOR;
+IdModule  = 0805;
+EndCmp
+
+EndListe

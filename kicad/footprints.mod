@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Tue 20 Sep 2016 12:27:53 AEST
+PCBNEW-LibModule-V1  Wed 21 Sep 2016 17:10:48 AEST
 # encoding utf-8
 Units mm
 $INDEX
@@ -6,6 +6,7 @@ $INDEX
 5050
 Header_2x1
 Header_4x2
+Header_5x2
 Minicast
 SOD-323
 SOIC-16
@@ -120,7 +121,7 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE Header_2x1
 $MODULE Header_4x2
-Po 0 0 0 15 56C6F51B 00000000 ~~
+Po 0 0 0 15 57E231C1 00000000 ~~
 Li Header_4x2
 Kw Header
 Sc 0
@@ -133,56 +134,56 @@ DS 5.08 -2.54 5.08 2.54 0.15 21
 DS 5.08 2.54 -5.08 2.54 0.15 21
 DS -5.08 2.54 -5.08 -2.54 0.15 21
 $PAD
-Sh "1" R 1.524 1.524 0 0 0
+Sh "1" R 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po -3.81 1.27
 $EndPAD
 $PAD
-Sh "2" C 1.524 1.524 0 0 0
+Sh "2" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po -3.81 -1.27
 $EndPAD
 $PAD
-Sh "3" C 1.524 1.524 0 0 0
+Sh "3" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po -1.27 1.27
 $EndPAD
 $PAD
-Sh "4" C 1.524 1.524 0 0 0
+Sh "4" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po -1.27 -1.27
 $EndPAD
 $PAD
-Sh "5" C 1.524 1.524 0 0 0
+Sh "5" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po 1.27 1.27
 $EndPAD
 $PAD
-Sh "6" C 1.524 1.524 0 0 0
+Sh "6" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po 1.27 -1.27
 $EndPAD
 $PAD
-Sh "7" C 1.524 1.524 0 0 0
+Sh "7" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
 Po 3.81 1.27
 $EndPAD
 $PAD
-Sh "8" C 1.524 1.524 0 0 0
+Sh "8" C 1.8 1.8 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
 Ne 0 ""
@@ -195,6 +196,96 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE Header_4x2
+$MODULE Header_5x2
+Po 0 0 0 15 57E23271 00000000 ~~
+Li Header_5x2
+Kw Header
+Sc 0
+AR 
+Op 0 0 0
+T0 1.27 3.81 1 1 0 0.15 N V 21 N "Header_5x2"
+T1 1.27 -3.81 1 1 0 0.15 N I 21 N "Val**"
+DS -5.08 2.54 7.62 2.54 0.15 21
+DS -5.08 -2.54 7.62 -2.54 0.15 21
+DS 7.62 -2.54 7.62 2.54 0.15 21
+DS -5.08 2.54 -5.08 -2.54 0.15 21
+$PAD
+Sh "1" R 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.81 1.27
+$EndPAD
+$PAD
+Sh "2" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.81 -1.27
+$EndPAD
+$PAD
+Sh "3" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.27 1.27
+$EndPAD
+$PAD
+Sh "4" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.27 -1.27
+$EndPAD
+$PAD
+Sh "5" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.27 1.27
+$EndPAD
+$PAD
+Sh "6" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.27 -1.27
+$EndPAD
+$PAD
+Sh "7" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.81 1.27
+$EndPAD
+$PAD
+Sh "8" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.81 -1.27
+$EndPAD
+$PAD
+Sh "9" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6.35 1.27
+$EndPAD
+$PAD
+Sh "10" C 1.8 1.8 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6.35 -1.27
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_4x2.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE Header_5x2
 $MODULE Minicast
 Po 0 0 0 15 57E09E8F 00000000 ~~
 Li Minicast
